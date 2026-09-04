@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a58ca">
+  <meta name="robots" content="index, follow">
+  <title>Contato | Prime Terceirizados</title>
+  <meta name="description" content="Solicite contato comercial sobre limpeza profissional ou controle de acesso com a Prime Terceirizados.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <div class="container-xl">
+      <a class="navbar-brand" href="index.html" aria-label="Prime Terceirizados - Início">
+        <img src="assets/img/logo-prime.svg" class="brand-logo" alt="Prime Terceirizados">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+        <i class="bi bi-list fs-2" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" data-nav href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-services-nav href="servicos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" data-nav href="limpeza.html">Limpeza profissional</a></li>
+              <li><a class="dropdown-item" data-nav href="controle-acesso.html">Controle de acesso</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" data-nav href="sobre.html">A Prime</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav href="contato.html">Contato</a></li>
+        </ul>
+        <a class="btn-prime ms-lg-3" href="contato.html#proposta"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> Solicitar proposta</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="page-hero"><div class="container-xl"><div class="page-intro reveal"><span class="eyebrow">Contato</span><h1>Conte o que sua operação precisa.</h1><p>Envie as informações principais para direcionarmos sua solicitação comercial.</p></div></div></section>
+  <section class="section" id="proposta"><div class="container-xl"><div class="row g-5 align-items-start">
+    <div class="col-lg-5 reveal"><aside class="contact-side"><div class="detail-visual"><img src="assets/img/contato.png" alt="Ilustração dos serviços da Prime"></div><h2>Informações úteis para a proposta.</h2><p>Quanto mais claro for o contexto, mais fácil será entender o escopo necessário.</p><ul class="check-list"><li><i class="bi bi-check-circle-fill"></i><span>Tipo de ambiente ou estabelecimento.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Serviço desejado.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Horários, frequência ou fluxo principal.</span></li></ul></aside></div>
+    <div class="col-lg-7 reveal"><div class="form-shell"><h2 class="h3 mb-2">Solicitar contato comercial</h2><p class="mb-4">Preencha apenas as informações necessárias para retornarmos sua solicitação.</p>
+      <form id="contactForm" action="api/contato.php" method="post" novalidate>
+        <div class="honeypot" aria-hidden="true"><label for="website">Não preencha este campo</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="row g-3">
+          <div class="col-md-6"><label class="form-label" for="nome">Nome *</label><input class="form-control" id="nome" name="nome" type="text" minlength="2" maxlength="80" required autocomplete="name"><div class="invalid-feedback">Informe seu nome.</div></div>
+          <div class="col-md-6"><label class="form-label" for="empresa">Empresa / condomínio</label><input class="form-control" id="empresa" name="empresa" type="text" maxlength="120" autocomplete="organization"></div>
+          <div class="col-md-6"><label class="form-label" for="email">E-mail</label><input class="form-control" id="email" name="email" type="email" maxlength="160" autocomplete="email"></div>
+          <div class="col-md-6"><label class="form-label" for="telefone">Telefone</label><input class="form-control" id="telefone" name="telefone" type="tel" maxlength="30" autocomplete="tel"><div class="form-text">Informe e-mail ou telefone para retorno.</div></div>
+          <div class="col-12"><label class="form-label" for="servico">Serviço *</label><select class="form-select" id="servico" name="servico" required><option value="">Selecione</option><option value="Limpeza profissional">Limpeza profissional</option><option value="Controle de acesso">Controle de acesso</option><option value="Limpeza e controle de acesso">Limpeza e controle de acesso</option></select><div class="invalid-feedback">Selecione o serviço.</div></div>
+          <div class="col-12"><label class="form-label" for="mensagem">Informações da operação *</label><textarea class="form-control" id="mensagem" name="mensagem" minlength="10" maxlength="2500" required placeholder="Ex.: tipo de local, horários, frequência, quantidade de acessos ou outras informações necessárias."></textarea><div class="invalid-feedback">Descreva brevemente a necessidade.</div></div>
+          <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" value="1" id="privacidade" name="privacidade" required><label class="form-check-label" for="privacidade">Li a <a href="privacidade.html" class="text-prime fw-bold">política de privacidade</a> e concordo com o uso dos dados para retorno desta solicitação. *</label><div class="invalid-feedback">É necessário aceitar para enviar.</div></div></div>
+          <div class="col-12"><div id="formStatus" class="form-status" aria-live="polite"></div></div>
+          <div class="col-12"><button class="btn-prime" type="submit"><i class="bi bi-send"></i> Enviar solicitação</button></div>
+          <p>Ou entre diretamente em contato com o e-mail:</p>
+        </div>
+      </form>
+    </div></div>
+  </div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="container-xl">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6">
+        <img src="assets/img/logo-prime.svg" class="footer-logo mb-3" alt="Prime Terceirizados">
+        <p class="mb-0" style="max-width: 560px;">Serviços terceirizados de limpeza profissional e controle de acesso, estruturados conforme a rotina de cada operação.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h5 class="h6 mb-3">Navegação</h5>
+        <ul class="footer-links">
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="sobre.html">A Prime</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h5 class="h6 mb-3">Soluções</h5>
+        <ul class="footer-links">
+          <li><a href="limpeza.html">Limpeza profissional</a></li>
+          <li><a href="controle-acesso.html">Controle de acesso</a></li>
+          <li><a href="privacidade.html">Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex justify-content-between gap-3 flex-wrap">
+      <span>© <span data-current-year></span> Prime Terceirizados. Todos os direitos reservados.</span>
+      <div class="footer-meta"><a href="privacidade.html">Política de privacidade</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
+<script src="assets/js/contact.js" defer></script>
+</body>
+</html>
