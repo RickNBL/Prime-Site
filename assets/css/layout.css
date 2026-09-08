@@ -2,7 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 1030;
-  height: var(--header-height);
+  min-height: var(--header-height);
+  height: auto;
   background: rgba(255, 255, 255, .96);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(223, 231, 239, .9);

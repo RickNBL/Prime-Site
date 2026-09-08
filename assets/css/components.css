@@ -147,3 +147,20 @@ textarea.form-control { min-height: 150px; resize: vertical; }
   padding: 1.2rem 1.3rem;
 }
 .notice-box strong { color: var(--prime-ink); }
+
+/* Shared presentation helpers */
+.footer-summary { max-width: 560px; }
+.cta-content { z-index: 1; }
+.not-found-shell { max-width: 700px; }
+.not-found-logo { width: 120px; }
+.service-tile .visual.service-photo {
+  height: 320px;
+  min-height: 0;
+  padding: 0;
+}
+.service-tile .visual.service-photo img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}

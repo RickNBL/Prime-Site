@@ -7,6 +7,7 @@
   <meta name="robots" content="index, follow">
   <title>Contato | Prime Terceirizados</title>
   <meta name="description" content="Solicite contato comercial sobre limpeza profissional ou controle de acesso com a Prime Terceirizados.">
+  <script src="assets/js/theme-init.js"></script>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/accessibility.css">
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -33,6 +35,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-services-nav href="servicos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" data-nav href="servicos.html">Visão geral</a></li>
               <li><a class="dropdown-item" data-nav href="limpeza.html">Limpeza profissional</a></li>
               <li><a class="dropdown-item" data-nav href="controle-acesso.html">Controle de acesso</a></li>
             </ul>
@@ -49,7 +52,7 @@
 <main id="conteudo">
   <section class="page-hero"><div class="container-xl"><div class="page-intro reveal"><span class="eyebrow">Contato</span><h1>Conte o que sua operação precisa.</h1><p>Envie as informações principais para direcionarmos sua solicitação comercial.</p></div></div></section>
   <section class="section" id="proposta"><div class="container-xl"><div class="row g-5 align-items-start">
-    <div class="col-lg-5 reveal"><aside class="contact-side"><div class="detail-visual"><img src="assets/img/contato.png" alt="Ilustração dos serviços da Prime"></div><h2>Informações úteis para a proposta.</h2><p>Quanto mais claro for o contexto, mais fácil será entender o escopo necessário.</p><ul class="check-list"><li><i class="bi bi-check-circle-fill"></i><span>Tipo de ambiente ou estabelecimento.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Serviço desejado.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Horários, frequência ou fluxo principal.</span></li></ul></aside></div>
+    <div class="col-lg-5 reveal"><aside class="contact-side"><div class="detail-visual"><img src="assets/img/contato.webp" alt="Ilustração dos serviços da Prime"></div><h2>Informações úteis para a proposta.</h2><p>Quanto mais claro for o contexto, mais fácil será entender o escopo necessário.</p><ul class="check-list"><li><i class="bi bi-check-circle-fill"></i><span>Tipo de ambiente ou estabelecimento.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Serviço desejado.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Horários, frequência ou fluxo principal.</span></li></ul></aside></div>
     <div class="col-lg-7 reveal"><div class="form-shell"><h2 class="h3 mb-2">Solicitar contato comercial</h2><p class="mb-4">Preencha apenas as informações necessárias para retornarmos sua solicitação.</p>
       <form id="contactForm" action="api/contato.php" method="post" novalidate>
         <div class="honeypot" aria-hidden="true"><label for="website">Não preencha este campo</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
@@ -63,7 +66,6 @@
           <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" value="1" id="privacidade" name="privacidade" required><label class="form-check-label" for="privacidade">Li a <a href="privacidade.html" class="text-prime fw-bold">política de privacidade</a> e concordo com o uso dos dados para retorno desta solicitação. *</label><div class="invalid-feedback">É necessário aceitar para enviar.</div></div></div>
           <div class="col-12"><div id="formStatus" class="form-status" aria-live="polite"></div></div>
           <div class="col-12"><button class="btn-prime" type="submit"><i class="bi bi-send"></i> Enviar solicitação</button></div>
-          <p>Ou entre diretamente em contato com o e-mail:</p>
         </div>
       </form>
     </div></div>
@@ -74,7 +76,7 @@
     <div class="row g-4 align-items-start">
       <div class="col-lg-6">
         <img src="assets/img/logo-prime.svg" class="footer-logo mb-3" alt="Prime Terceirizados">
-        <p class="mb-0" style="max-width: 560px;">Serviços terceirizados de limpeza profissional e controle de acesso, estruturados conforme a rotina de cada operação.</p>
+        <p class="mb-0 footer-summary">Serviços terceirizados de limpeza profissional e controle de acesso, estruturados conforme a rotina de cada operação.</p>
       </div>
       <div class="col-6 col-lg-3">
         <h5 class="h6 mb-3">Navegação</h5>
@@ -101,6 +103,7 @@
 </footer>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/accessibility.js" defer></script>
 <script src="assets/js/animations.js" defer></script>
 <script src="assets/js/contact.js" defer></script>
 </body>
