@@ -14,7 +14,7 @@
       image: 'assets/img/home-prime.webp',
       alt: 'Profissionais da Prime Terceirizados em ambiente corporativo',
       kicker: 'Visão integrada',
-      title: 'Limpeza e controle de acesso apresentados com a mesma identidade operacional.'
+      title: 'Limpeza profissional e segurança integradas à rotina da sua operação.'
     },
     limpeza: {
       image: 'assets/img/limpeza-home.webp',
@@ -22,11 +22,11 @@
       kicker: 'Limpeza profissional',
       title: 'Rotinas de conservação e higienização alinhadas ao uso de cada ambiente.'
     },
-    acesso: {
-      image: 'assets/img/controle-home.webp',
-      alt: 'Profissionais realizando controle de acesso em ambiente corporativo',
-      kicker: 'Controle de acesso',
-      title: 'Organização de entradas e saídas conforme os procedimentos definidos para o local.'
+    seguranca: {
+      image: 'assets/img/seguranca-home.webp',
+      alt: 'Profissionais de segurança em ambiente corporativo',
+      kicker: 'Segurança',
+      title: 'Atuação de segurança alinhada aos procedimentos e à rotina de cada ambiente.'
     }
   };
 

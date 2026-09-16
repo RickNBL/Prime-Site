@@ -19,7 +19,7 @@
     }
   });
 
-  const servicePages = ['servicos.html', 'limpeza.html', 'controle-acesso.html'];
+  const servicePages = ['servicos.html', 'limpeza.html', 'seguranca.html'];
   if (servicePages.includes(currentFile)) {
     const serviceTrigger = document.querySelector('[data-services-nav]');
     if (serviceTrigger) serviceTrigger.classList.add('active');

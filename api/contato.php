@@ -62,7 +62,7 @@ if ($privacidade !== '1') {
     respond(422, false, 'É necessário aceitar a política de privacidade.');
 }
 
-$allowedServices = ['Limpeza profissional', 'Controle de acesso', 'Limpeza e controle de acesso'];
+$allowedServices = ['Limpeza profissional', 'Segurança', 'Limpeza e segurança'];
 if (!in_array($servico, $allowedServices, true)) {
     respond(422, false, 'Selecione um serviço válido.');
 }

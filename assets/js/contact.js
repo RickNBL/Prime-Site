@@ -14,8 +14,8 @@
   if (serviceSelect && requestedService) {
     const map = {
       limpeza: 'Limpeza profissional',
-      acesso: 'Controle de acesso',
-      ambos: 'Limpeza e controle de acesso'
+      seguranca: 'Segurança',
+      ambos: 'Limpeza e segurança'
     };
     const value = map[requestedService];
     if (value) serviceSelect.value = value;
