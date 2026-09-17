@@ -18,134 +18,6 @@
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/accessibility.css">
 
-
-<style>
-  .service-page{
-    --photo-accent:#0a58ca;
-    --photo-accent-soft:rgba(10,88,202,.12);
-    --photo-surface:#f6f9fd;
-  }
-  .limpeza-page{--photo-accent:#1e90d2;--photo-accent-soft:rgba(30,144,210,.16);--photo-surface:#f4fbff;}
-  .seguranca-page{--photo-accent:#0a58ca;--photo-accent-soft:rgba(10,88,202,.14);--photo-surface:#edf4fb;}
-  .jardinagem-page{--photo-accent:#4f944e;--photo-accent-soft:rgba(79,148,78,.16);--photo-surface:#f3faf1;}
-  .manutencao-page{--photo-accent:#d58a12;--photo-accent-soft:rgba(213,138,18,.16);--photo-surface:#fffbf3;}
-
-  .modern-photo-card{
-    position:relative;
-    overflow:hidden;
-    border-radius:32px;
-    padding:18px;
-    background:linear-gradient(180deg,#ffffff 0%,var(--photo-surface) 100%);
-    border:1px solid rgba(15,23,42,.06);
-    box-shadow:0 28px 70px rgba(15,23,42,.10);
-    min-height:430px;
-    isolation:isolate;
-  }
-  .modern-photo-card::before{
-    content:"";
-    position:absolute;
-    top:-70px;
-    right:-45px;
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    background:var(--photo-accent-soft);
-    filter:blur(6px);
-    z-index:-1;
-  }
-  .modern-photo-card::after{
-    content:"";
-    position:absolute;
-    left:18px;
-    bottom:18px;
-    width:120px;
-    height:120px;
-    border-radius:28px;
-    background-image: radial-gradient(var(--photo-accent-soft) 2px, transparent 2px);
-    background-size:14px 14px;
-    opacity:.8;
-    z-index:0;
-  }
-  .modern-photo-card img{
-    width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
-    display:block;
-    border-radius:24px;
-    box-shadow:0 12px 32px rgba(15,23,42,.14);
-    position:relative;
-    z-index:1;
-  }
-  .photo-badge{
-    position:absolute;
-    top:30px;
-    left:30px;
-    z-index:2;
-    display:inline-flex;
-    align-items:center;
-    gap:.55rem;
-    padding:.72rem 1rem;
-    border-radius:999px;
-    background:rgba(255,255,255,.88);
-    backdrop-filter:blur(10px);
-    box-shadow:0 12px 24px rgba(15,23,42,.10);
-    color:#0f172a;
-    font-size:.82rem;
-    font-weight:800;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-  }
-  .photo-badge i{color:var(--photo-accent);font-size:1rem;}
-  .photo-meta-card{
-    position:absolute;
-    right:30px;
-    bottom:30px;
-    z-index:2;
-    max-width:260px;
-    padding:1rem 1.05rem;
-    border-radius:20px;
-    background:rgba(8,15,28,.76);
-    color:#fff;
-    box-shadow:0 18px 36px rgba(15,23,42,.22);
-    backdrop-filter:blur(16px);
-  }
-  .photo-meta-card strong{
-    display:block;
-    font-size:1rem;
-    font-weight:800;
-    margin-bottom:.25rem;
-  }
-  .photo-meta-card span{
-    display:block;
-    color:rgba(255,255,255,.78);
-    font-size:.9rem;
-    line-height:1.45;
-  }
-  .service-detail-image.reveal{
-    opacity:0;
-    transform:translateY(26px) scale(.98);
-    transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
-  }
-  .service-detail-image.reveal.is-visible{
-    opacity:1;
-    transform:none;
-  }
-  @media (max-width: 991.98px){
-    .modern-photo-card{min-height:auto;padding:14px;border-radius:24px;}
-    .photo-badge{top:24px;left:24px;padding:.62rem .85rem;font-size:.74rem;}
-    .photo-meta-card{right:22px;left:22px;bottom:22px;max-width:none;}
-  }
-  @media (max-width: 575.98px){
-    .modern-photo-card img{aspect-ratio:5/4;}
-    .photo-badge{position:static;margin:0 0 12px 0;}
-    .modern-photo-card::after{width:82px;height:82px;left:14px;bottom:14px;}
-    .photo-meta-card{position:static;margin-top:12px;border-radius:16px;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .service-detail-image.reveal,.service-detail-image.reveal.is-visible{opacity:1;transform:none;transition:none;}
-  }
-</style>
-
 </head>
 <body class="service-page manutencao-page">
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -180,7 +52,7 @@
 </header>
 <main id="conteudo">
   <section class="page-hero service-page-hero service-hero-unique"><div class="container-xl"><div class="row align-items-end g-4"><div class="col-lg-8"><div class="page-intro reveal"><span class="eyebrow">Manutenção predial</span><h1>Manutenção organizada para reduzir pequenas pendências do dia a dia.</h1><p>Apoio em manutenção preventiva e corretiva para demandas prediais compatíveis com o escopo contratado.</p></div></div><div class="col-lg-4 reveal"><a class="btn-prime" href="contato.html#proposta">Solicitar proposta <i class="bi bi-arrow-right"></i></a></div></div></div></section>
-  <section class="section service-overview"><div class="container-xl"><div class="row align-items-center g-5"><div class="col-lg-6 reveal"><div class="detail-visual service-detail-image modern-photo-card reveal"><span class="photo-badge"><i class="bi bi-tools"></i> Manutenção</span><img src="assets/img/manutencao-destaque.png" alt="Técnico de manutenção em lobby corporativo moderno"></div></div><div class="col-lg-6 reveal"><span class="eyebrow">Como pode funcionar</span><h2 class="mt-3">Escopo organizado conforme o ambiente e a necessidade.</h2><p class="lead-copy">Antes da implantação, é importante compreender as características do local, a frequência esperada, os horários e as atividades necessárias. A proposta é construída com base nessas informações.</p><ul class="check-list mt-4"><li><i class="bi bi-check-circle-fill"></i><span>Lista de atividades e limites técnicos definidos antes da execução.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Registro e priorização das demandas identificadas.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Encaminhamento de atividades especializadas quando exigirem habilitação específica.</span></li></ul><div class="notice-box mt-4"><strong>Importante:</strong> Serviços elétricos, hidráulicos, trabalho em altura ou outras atividades técnicas devem respeitar normas aplicáveis e, quando necessário, ser executados por profissionais habilitados.</div></div></div></div></section>
+  <section class="section service-overview"><div class="container-xl"><div class="row align-items-center g-5"><div class="col-lg-6 reveal"><div class="detail-visual service-detail-image modern-photo-card"><span class="photo-badge"><i class="bi bi-tools"></i> Manutenção</span><img src="assets/img/manutencao-destaque.png" alt="Técnico de manutenção em lobby corporativo moderno"><div class="photo-title-card"><strong>Suporte predial</strong></div></div></div><div class="col-lg-6 reveal"><span class="eyebrow">Como pode funcionar</span><h2 class="mt-3">Escopo organizado conforme o ambiente e a necessidade.</h2><p class="lead-copy">Antes da implantação, é importante compreender as características do local, a frequência esperada, os horários e as atividades necessárias. A proposta é construída com base nessas informações.</p><ul class="check-list mt-4"><li><i class="bi bi-check-circle-fill"></i><span>Lista de atividades e limites técnicos definidos antes da execução.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Registro e priorização das demandas identificadas.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Encaminhamento de atividades especializadas quando exigirem habilitação específica.</span></li></ul><div class="notice-box mt-4"><strong>Importante:</strong> Serviços elétricos, hidráulicos, trabalho em altura ou outras atividades técnicas devem respeitar normas aplicáveis e, quando necessário, ser executados por profissionais habilitados.</div></div></div></div></section>
   
   <section class="section section-soft service-scope"><div class="container-xl"><div class="section-title reveal"><span class="eyebrow">Possibilidades de escopo</span><h2>Atividades que podem compor o serviço.</h2><p class="lead-copy">A composição abaixo apresenta possibilidades gerais. O escopo final deve ser definido na proposta contratual.</p></div><div class="row g-3"><div class="col-md-6"><div class="scope-item"><i class="bi bi-clipboard2-check"></i><div><h3>Inspeções de rotina</h3><p>Verificações visuais e acompanhamento de itens definidos em checklist.</p></div></div></div><div class="col-md-6"><div class="scope-item"><i class="bi bi-tools"></i><div><h3>Pequenos reparos</h3><p>Ajustes e substituições simples compatíveis com o escopo e condições do local.</p></div></div></div><div class="col-md-6"><div class="scope-item"><i class="bi bi-calendar2-check"></i><div><h3>Preventiva</h3><p>Organização de atividades periódicas para antecipar necessidades recorrentes.</p></div></div></div><div class="col-md-6"><div class="scope-item"><i class="bi bi-wrench-adjustable"></i><div><h3>Corretiva</h3><p>Apoio em demandas identificadas durante a operação, conforme prioridade e responsabilidade.</p></div></div></div></div></div></section>
   <section class="section-sm service-cta-wrap"><div class="container-xl"><div class="cta-panel reveal"><div class="row align-items-center g-4 position-relative cta-content"><div class="col-lg-8"><h2 class="mb-3">Precisa estruturar manutenção para sua operação?</h2><p class="mb-0">Envie o contexto do local, frequência e principais necessidades para direcionarmos o atendimento.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-neutral" href="contato.html?servico=manutencao#proposta">Solicitar proposta</a></div></div></div></div></section>
