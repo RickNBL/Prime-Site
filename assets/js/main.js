@@ -1,6 +1,15 @@
 (() => {
   'use strict';
 
+  const primeMobileViewportGuard = () => {
+    if (window.innerWidth < 1200 && window.scrollX !== 0) {
+      window.scrollTo(0, window.scrollY);
+    }
+  };
+  window.addEventListener('pageshow', primeMobileViewportGuard, { passive: true });
+  window.addEventListener('resize', primeMobileViewportGuard, { passive: true });
+  primeMobileViewportGuard();
+
   const currentYear = document.querySelectorAll('[data-current-year]');
   currentYear.forEach((el) => { el.textContent = new Date().getFullYear(); });
 

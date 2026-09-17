@@ -617,3 +617,212 @@
     border-radius: 24px;
   }
 }
+
+/* =========================================================
+   Componentes visuais atuais das páginas de serviço
+   ========================================================= */
+.service-page {
+  --service-accent: var(--prime-blue);
+  --service-accent-soft: rgba(10, 88, 202, .12);
+  --service-card-bg: #f5f9fd;
+}
+
+.limpeza-page {
+  --service-accent: #1688cc;
+  --service-accent-soft: rgba(22, 136, 204, .14);
+  --service-card-bg: #f2faff;
+}
+
+.seguranca-page {
+  --service-accent: #0a58ca;
+  --service-accent-soft: rgba(10, 88, 202, .14);
+  --service-card-bg: #eef4fb;
+}
+
+.jardinagem-page {
+  --service-accent: #4f944e;
+  --service-accent-soft: rgba(79, 148, 78, .15);
+  --service-card-bg: #f3faf1;
+}
+
+.manutencao-page {
+  --service-accent: #cf8210;
+  --service-accent-soft: rgba(207, 130, 16, .15);
+  --service-card-bg: #fff9ef;
+}
+
+.modern-photo-card {
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, .07);
+  border-radius: 30px;
+  background: linear-gradient(180deg, #fff 0%, var(--service-card-bg) 100%);
+  box-shadow: 0 24px 58px rgba(13, 41, 68, .10);
+  isolation: isolate;
+}
+
+.modern-photo-card::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: -72px;
+  top: -82px;
+  border-radius: 50%;
+  background: var(--service-accent-soft);
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.modern-photo-card img {
+  width: 100%;
+  max-height: none !important;
+  aspect-ratio: 16 / 10;
+  object-fit: cover !important;
+  object-position: center;
+  display: block;
+  border-radius: 21px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, .12);
+}
+
+.photo-badge {
+  position: absolute;
+  left: 28px;
+  top: 28px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  max-width: calc(100% - 56px);
+  padding: .65rem .9rem;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 10px 26px rgba(15,23,42,.12);
+  backdrop-filter: blur(12px);
+  color: #16283a;
+  font-size: .76rem;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.photo-badge i { color: var(--service-accent); }
+
+.photo-title-card {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  z-index: 2;
+  max-width: min(74%, 320px);
+  padding: .9rem 1rem;
+  border-radius: 17px;
+  background: rgba(8, 19, 33, .78);
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(8, 19, 33, .22);
+  backdrop-filter: blur(14px);
+}
+
+.photo-title-card strong {
+  color: #fff;
+  font-size: .96rem;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
+
+/* Contato via WhatsApp */
+.contact-whatsapp-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(37, 211, 102, .10), transparent 36%),
+    linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+}
+
+.contact-whatsapp-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(2.2rem, 6vw, 4.4rem);
+  border: 1px solid #dfe8e3;
+  border-radius: 34px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 24px 70px rgba(13, 41, 68, .09);
+  text-align: center;
+}
+
+.contact-whatsapp-card::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -115px;
+  top: -120px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, .08);
+}
+
+.whatsapp-icon-wrap {
+  position: relative;
+  z-index: 1;
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.4rem;
+  border-radius: 28px;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 18px 36px rgba(37, 211, 102, .25);
+  font-size: 2.35rem;
+}
+
+.contact-whatsapp-card .eyebrow {
+  position: relative;
+  z-index: 1;
+  color: #168b43;
+}
+
+.contact-whatsapp-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: .9rem 0 .8rem;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  letter-spacing: -.045em;
+}
+
+.contact-whatsapp-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--prime-text);
+}
+
+.btn-whatsapp {
+  position: relative;
+  z-index: 1;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  margin-top: 1.6rem;
+  padding: .9rem 1.35rem;
+  border-radius: 14px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 850;
+  box-shadow: 0 14px 30px rgba(37, 211, 102, .22);
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.btn-whatsapp:hover {
+  color: #fff;
+  background: #1fb858;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(37, 211, 102, .28);
+}
