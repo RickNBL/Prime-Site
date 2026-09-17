@@ -4,6 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/primeshlcom/public_html/
     - /bin/cp -f *.html $DEPLOYPATH
     - /bin/cp -f .htaccess $DEPLOYPATH
+    - /bin/cp -f versao.txt $DEPLOYPATH
     - /bin/cp -Rf assets $DEPLOYPATH
     - /bin/cp -Rf api $DEPLOYPATH
     - /bin/cp -Rf config $DEPLOYPATH
