@@ -1,7 +1,0 @@
-.DS_Store
-Thumbs.db
-.vscode/
-__pycache__/
-*.pyc
-*.log
-config/site.local.php
