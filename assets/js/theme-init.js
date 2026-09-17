@@ -2,15 +2,10 @@
   'use strict';
 
   const html = document.documentElement;
+  html.dataset.bsTheme = 'light';
 
   try {
-    const savedTheme = localStorage.getItem('prime-theme');
-    const theme = savedTheme === 'dark' || savedTheme === 'light'
-      ? savedTheme
-      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    html.dataset.theme = theme;
-    html.dataset.bsTheme = theme;
-
+    localStorage.removeItem('prime-theme');
     const raw = localStorage.getItem('prime-a11y');
     if (!raw) return;
     const settings = JSON.parse(raw);
@@ -22,8 +17,5 @@
       const scale = Math.min(125, Math.max(87.5, settings.fontScale));
       html.style.fontSize = `${scale}%`;
     }
-  } catch (_) {
-    html.dataset.theme = 'light';
-    html.dataset.bsTheme = 'light';
-  }
+  } catch (_) {}
 })();

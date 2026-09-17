@@ -238,3 +238,382 @@
     margin-bottom: 0;
     line-height: 1.7;
 }
+/* =========================================================
+   Páginas de serviços com identidades visuais únicas
+   ========================================================= */
+.service-page .page-hero {
+  isolation: isolate;
+}
+
+.service-page .page-intro,
+.service-page .detail-visual,
+.service-page .section-title,
+.service-page .scope-item,
+.service-page .specialty-detail,
+.service-page .cta-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.service-page .page-intro .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .48rem .9rem;
+  border-radius: 999px;
+  font-size: .78rem;
+  letter-spacing: .08em;
+}
+
+.service-page .page-intro .eyebrow::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.service-page .page-intro p {
+  max-width: 680px;
+}
+
+.service-page .detail-visual {
+  box-shadow: 0 24px 60px rgba(13, 41, 68, .08);
+}
+
+.service-page .scope-item,
+.service-page .specialty-detail {
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.service-page .scope-item:hover,
+.service-page .specialty-detail:hover {
+  transform: translateY(-4px);
+}
+
+/* LIMPEZA — leve, luminosa e com formas suaves */
+.limpeza-page .page-hero {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(159, 225, 255, .45), transparent 26%),
+    radial-gradient(circle at 88% 16%, rgba(10, 88, 202, .15), transparent 28%),
+    linear-gradient(180deg, #f5fbff 0%, #ffffff 100%);
+}
+
+.limpeza-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: auto auto -85px -40px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(10, 88, 202, .08), transparent 70%);
+  filter: blur(2px);
+}
+
+.limpeza-page .page-hero::after {
+  border-color: rgba(68, 172, 255, .08);
+}
+
+.limpeza-page .page-intro .eyebrow {
+  background: #e9f7ff;
+  color: #1173bf;
+}
+
+.limpeza-page .detail-visual {
+  border-radius: 34px;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f9ff 100%);
+}
+
+.limpeza-page .detail-visual img {
+  border-radius: 24px;
+}
+
+.limpeza-page .specialty-detail {
+  height: 100%;
+  padding: 1.7rem;
+  border-radius: 26px;
+  border: 1px solid #d7ebfa;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+  box-shadow: 0 14px 42px rgba(28, 110, 170, .06);
+}
+
+.limpeza-page .specialty-detail:hover {
+  box-shadow: 0 22px 50px rgba(28, 110, 170, .10);
+  border-color: #b7ddf5;
+}
+
+.limpeza-page .specialty-detail .specialty-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: #eaf7ff;
+  color: #1173bf;
+  font-size: 1.25rem;
+}
+
+.limpeza-page .specialty-detail h3 {
+  margin: 1.15rem 0 .8rem;
+  font-size: 1.35rem;
+}
+
+.limpeza-page .specialty-detail ul {
+  margin: 1rem 0 1rem 1rem;
+  padding-left: .4rem;
+  color: var(--prime-text);
+}
+
+.limpeza-page .service-scope {
+  background: linear-gradient(180deg, #f7fbfe 0%, #eef8ff 100%);
+}
+
+.limpeza-page .scope-item {
+  border-radius: 22px;
+  background: rgba(255,255,255,.85);
+  border-color: #d5e8f6;
+}
+
+.limpeza-page .scope-item:hover {
+  box-shadow: 0 18px 38px rgba(28, 110, 170, .08);
+}
+
+.limpeza-page .cta-panel {
+  background: linear-gradient(135deg, #0674d8 0%, #4eb6ff 100%);
+}
+
+/* SEGURANÇA — mais sóbria, marcante e tecnológica */
+.seguranca-page .page-hero {
+  color: rgba(255,255,255,.84);
+  background:
+    linear-gradient(130deg, rgba(6, 15, 27, .96) 0%, rgba(8, 29, 55, .95) 52%, rgba(9, 71, 138, .88) 100%),
+    #06121f;
+  border-bottom-color: rgba(255,255,255,.08);
+}
+
+.seguranca-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.32), transparent 100%);
+  pointer-events: none;
+}
+
+.seguranca-page .page-hero::after {
+  border-color: rgba(122, 193, 255, .14);
+}
+
+.seguranca-page .page-intro h1,
+.seguranca-page .page-intro p {
+  color: #fff;
+}
+
+.seguranca-page .page-intro .eyebrow {
+  background: rgba(122, 193, 255, .12);
+  color: #a9d6ff;
+  border: 1px solid rgba(169, 214, 255, .18);
+}
+
+.seguranca-page .detail-visual {
+  border-radius: 18px;
+  background: linear-gradient(180deg, #0c1521 0%, #172b44 100%);
+  border-color: rgba(31, 79, 137, .35);
+  box-shadow: 0 30px 70px rgba(5, 12, 22, .20);
+}
+
+.seguranca-page .detail-visual img {
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 480px;
+}
+
+.seguranca-page .service-overview .check-list i,
+.seguranca-page .scope-item > i {
+  color: #61b5ff;
+}
+
+.seguranca-page .notice-box {
+  background: #f4f8fc;
+  border-left: 4px solid #0a58ca;
+}
+
+.seguranca-page .service-scope {
+  background:
+    linear-gradient(180deg, #eef4fa 0%, #f8fbfe 100%);
+}
+
+.seguranca-page .scope-item {
+  border-radius: 18px;
+  background: #ffffff;
+  border-color: #d8e2ed;
+  box-shadow: 0 12px 28px rgba(14, 35, 60, .05);
+}
+
+.seguranca-page .scope-item:hover {
+  box-shadow: 0 20px 44px rgba(14, 35, 60, .10);
+  border-color: #a9c8e8;
+}
+
+.seguranca-page .scope-item > i {
+  background: #eaf4ff;
+}
+
+.seguranca-page .cta-panel {
+  background: linear-gradient(135deg, #06111d 0%, #0b2f56 56%, #0a58ca 100%);
+}
+
+/* JARDINAGEM — orgânica, verde e acolhedora */
+.jardinagem-page .page-hero {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(98, 185, 98, .18), transparent 28%),
+    radial-gradient(circle at 18% 0%, rgba(188, 233, 170, .46), transparent 28%),
+    linear-gradient(180deg, #f8fcf7 0%, #ffffff 100%);
+}
+
+.jardinagem-page .page-hero::before {
+  content: "";
+  position: absolute;
+  right: 7%;
+  top: 22px;
+  width: 200px;
+  height: 200px;
+  border-radius: 58% 42% 63% 37% / 48% 34% 66% 52%;
+  background: rgba(111, 191, 103, .12);
+  filter: blur(4px);
+}
+
+.jardinagem-page .page-hero::after {
+  border-width: 44px;
+  border-color: rgba(111, 191, 103, .10);
+}
+
+.jardinagem-page .page-intro .eyebrow {
+  background: #eff8ee;
+  color: #3f8d45;
+}
+
+.jardinagem-page .detail-visual {
+  border-radius: 38px;
+  background: linear-gradient(180deg, #f7fbf3 0%, #ffffff 100%);
+}
+
+.jardinagem-page .detail-visual img {
+  max-height: 500px;
+}
+
+.jardinagem-page .service-overview .notice-box {
+  background: #f4fbf0;
+  border-color: #d5e8cb;
+}
+
+.jardinagem-page .service-scope {
+  background: linear-gradient(180deg, #f4faf1 0%, #eef7eb 100%);
+}
+
+.jardinagem-page .scope-item {
+  border-radius: 28px;
+  background: rgba(255,255,255,.88);
+  border-color: #d6e7cf;
+}
+
+.jardinagem-page .scope-item > i {
+  background: #edf8ea;
+  color: #4f944e;
+  border-radius: 50%;
+}
+
+.jardinagem-page .scope-item:hover {
+  box-shadow: 0 20px 40px rgba(79, 148, 78, .09);
+}
+
+.jardinagem-page .cta-panel {
+  background: linear-gradient(135deg, #315f1d 0%, #4f944e 55%, #79c265 100%);
+}
+
+/* MANUTENÇÃO — geométrica, técnica e mais industrial */
+.manutencao-page .page-hero {
+  background:
+    linear-gradient(180deg, rgba(255, 167, 38, .10), rgba(255, 167, 38, 0) 48%),
+    linear-gradient(180deg, #fbfcfe 0%, #ffffff 100%);
+}
+
+.manutencao-page .page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, rgba(18, 39, 61, .05) 25%, transparent 25%, transparent 50%, rgba(18, 39, 61, .05) 50%, rgba(18, 39, 61, .05) 75%, transparent 75%, transparent);
+  background-size: 22px 22px;
+  opacity: .35;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.22), transparent 100%);
+}
+
+.manutencao-page .page-hero::after {
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  bottom: -150px;
+  border-color: rgba(255, 167, 38, .12);
+  border-style: dashed;
+}
+
+.manutencao-page .page-intro .eyebrow {
+  background: #fff4e4;
+  color: #be7000;
+}
+
+.manutencao-page .detail-visual {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #f7f9fb 0%, #ffffff 100%);
+  border-color: #dbe2ea;
+}
+
+.manutencao-page .detail-visual img {
+  max-height: 440px;
+}
+
+.manutencao-page .service-overview .notice-box {
+  background: #fff8ef;
+  border-color: #f1d6a5;
+  border-left: 4px solid #f3a327;
+}
+
+.manutencao-page .service-scope {
+  background: linear-gradient(180deg, #f8fafc 0%, #f0f4f8 100%);
+}
+
+.manutencao-page .scope-item {
+  border-radius: 16px;
+  border-color: #d7e0e9;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.manutencao-page .scope-item > i {
+  background: #fff1d6;
+  color: #d58a12;
+}
+
+.manutencao-page .scope-item:hover {
+  box-shadow: 0 18px 38px rgba(87, 104, 121, .10);
+  border-color: #c5d0db;
+}
+
+.manutencao-page .cta-panel {
+  background: linear-gradient(135deg, #243546 0%, #425466 58%, #f0a126 128%);
+}
+
+/* Responsividade para os estilos exclusivos */
+@media (max-width: 991.98px) {
+  .limpeza-page .specialty-detail,
+  .service-page .detail-visual,
+  .service-page .scope-item {
+    border-radius: 22px;
+  }
+
+  .jardinagem-page .detail-visual,
+  .jardinagem-page .scope-item {
+    border-radius: 24px;
+  }
+}

@@ -3,7 +3,6 @@
 
   const html = document.documentElement;
   const STORAGE_KEY = 'prime-a11y';
-  const THEME_KEY = 'prime-theme';
   const defaults = { fontScale: 100, contrast: false, links: false, motion: false };
 
   const readSettings = () => {
@@ -25,46 +24,6 @@
     settings.contrast ? html.dataset.a11yContrast = 'high' : delete html.dataset.a11yContrast;
     settings.links ? html.dataset.a11yLinks = 'on' : delete html.dataset.a11yLinks;
     settings.motion ? html.dataset.a11yMotion = 'reduce' : delete html.dataset.a11yMotion;
-  };
-
-  const setTheme = (theme) => {
-    const next = theme === 'dark' ? 'dark' : 'light';
-    html.dataset.theme = next;
-    html.dataset.bsTheme = next;
-    try { localStorage.setItem(THEME_KEY, next); } catch (_) {}
-    const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', next === 'dark' ? '#0b1621' : '#0a58ca');
-    updateThemeButton();
-    const themeA11y = document.querySelector('[data-a11y-theme]');
-    if (themeA11y) {
-      const active = next === 'dark';
-      themeA11y.setAttribute('aria-pressed', String(active));
-      const state = themeA11y.querySelector('.a11y-state');
-      if (state) state.textContent = active ? 'Ligado' : 'Desligado';
-    }
-  };
-
-  const updateThemeButton = () => {
-    const btn = document.querySelector('[data-theme-toggle]');
-    if (!btn) return;
-    const dark = html.dataset.theme === 'dark';
-    btn.setAttribute('aria-label', dark ? 'Ativar modo claro' : 'Ativar modo escuro');
-    btn.setAttribute('title', dark ? 'Modo claro' : 'Modo escuro');
-    btn.innerHTML = `<i class="bi ${dark ? 'bi-sun-fill' : 'bi-moon-stars'}" aria-hidden="true"></i>`;
-  };
-
-  const createHeaderThemeButton = () => {
-    const nav = document.querySelector('#mainNav');
-    if (!nav || nav.querySelector('[data-theme-toggle]')) return;
-    const cta = nav.querySelector('.btn-prime');
-    const wrap = document.createElement('div');
-    wrap.className = 'site-utility';
-    wrap.innerHTML = '<button class="utility-button" type="button" data-theme-toggle aria-label="Alternar tema"></button>';
-    if (cta) nav.insertBefore(wrap, cta); else nav.appendChild(wrap);
-    wrap.querySelector('[data-theme-toggle]').addEventListener('click', () => {
-      setTheme(html.dataset.theme === 'dark' ? 'light' : 'dark');
-    });
-    updateThemeButton();
   };
 
   const createWidget = () => {
@@ -91,7 +50,6 @@
           <button type="button" class="a11y-toggle" data-a11y-contrast aria-pressed="false"><span>Alto contraste</span><span class="a11y-state">Desligado</span></button>
           <button type="button" class="a11y-toggle" data-a11y-links aria-pressed="false"><span>Destacar links</span><span class="a11y-state">Desligado</span></button>
           <button type="button" class="a11y-toggle" data-a11y-motion aria-pressed="false"><span>Reduzir animações</span><span class="a11y-state">Desligado</span></button>
-          <button type="button" class="a11y-toggle" data-a11y-theme aria-pressed="false"><span>Tema escuro</span><span class="a11y-state">Desligado</span></button>
         </div>
         <div class="a11y-group">
           <button type="button" class="a11y-reset" data-a11y-reset><i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i> Restaurar acessibilidade</button>
@@ -114,15 +72,13 @@
       const items = [
         [wrapper.querySelector('[data-a11y-contrast]'), settings.contrast],
         [wrapper.querySelector('[data-a11y-links]'), settings.links],
-        [wrapper.querySelector('[data-a11y-motion]'), settings.motion],
-        [wrapper.querySelector('[data-a11y-theme]'), html.dataset.theme === 'dark']
+        [wrapper.querySelector('[data-a11y-motion]'), settings.motion]
       ];
       items.forEach(([button, active]) => {
         button.setAttribute('aria-pressed', String(active));
         const state = button.querySelector('.a11y-state');
         if (state) state.textContent = active ? 'Ligado' : 'Desligado';
       });
-      updateThemeButton();
     };
 
     const openPanel = () => {
@@ -156,9 +112,6 @@
     wrapper.querySelector('[data-a11y-motion]').addEventListener('click', () => {
       settings.motion = !settings.motion; applySettings(); persist(); sync();
     });
-    wrapper.querySelector('[data-a11y-theme]').addEventListener('click', () => {
-      setTheme(html.dataset.theme === 'dark' ? 'light' : 'dark'); sync();
-    });
     wrapper.querySelector('[data-a11y-reset]').addEventListener('click', () => {
       settings = { ...defaults };
       applySettings();
@@ -178,7 +131,6 @@
   };
 
   const init = () => {
-    createHeaderThemeButton();
     createWidget();
   };
 

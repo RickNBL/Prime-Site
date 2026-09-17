@@ -1,4 +1,4 @@
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   :root { --header-height: 74px; }
   .site-header, .site-header .navbar { min-height: var(--header-height); height: auto; }
   .brand-logo { width: 82px; height: 58px; }

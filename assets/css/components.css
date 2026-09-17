@@ -164,3 +164,8 @@ textarea.form-control { min-height: 150px; resize: vertical; }
   max-height: none;
   object-fit: cover;
 }
+
+/* V3 service-page additions */
+.scope-item{height:100%;display:flex;gap:1rem;align-items:flex-start;padding:1.35rem;border:1px solid var(--prime-line);border-radius:20px;background:var(--prime-surface)}
+.scope-item>i{width:46px;height:46px;flex:0 0 46px;display:grid;place-items:center;border-radius:13px;background:var(--prime-blue-soft);color:var(--prime-blue);font-size:1.1rem}.scope-item h3{font-size:1.05rem;margin:.15rem 0 .35rem}.scope-item p{margin:0;font-size:.93rem}.footer-links-columns{columns:2;column-gap:1.5rem}.privacy-copy{max-width:850px}.privacy-copy h2{font-size:1.35rem;margin:2rem 0 .6rem}.privacy-copy h2:first-child{margin-top:0}
+@media(max-width:575.98px){.footer-links-columns{columns:1}}

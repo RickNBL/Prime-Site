@@ -84,3 +84,5 @@
     }
   });
 })();
+
+(() => { const s=document.querySelector('#servico'); if(!s)return; const q=new URLSearchParams(location.search).get('servico'); const m={limpeza:'Limpeza profissional',seguranca:'Segurança',jardinagem:'Jardinagem',manutencao:'Manutenção'}; if(q&&m[q]) s.value=m[q]; })();

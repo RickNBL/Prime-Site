@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a58ca">
+  <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="index, follow">
-  <title>Limpeza Profissional | Prime Terceirizados</title>
-  <meta name="description" content="Serviço terceirizado de limpeza profissional, conservação e higienização conforme a rotina do ambiente.">
+  <title>Limpeza profissional | Prime Terceirizados</title>
+  <meta name="description" content="Serviços de limpeza, conservação e higienização para diferentes ambientes, incluindo possibilidades de limpeza hospitalar e pós-obra.">
   <script src="assets/js/theme-init.js"></script>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -17,11 +17,140 @@
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/accessibility.css">
+
+
+<style>
+  .service-page{
+    --photo-accent:#0a58ca;
+    --photo-accent-soft:rgba(10,88,202,.12);
+    --photo-surface:#f6f9fd;
+  }
+  .limpeza-page{--photo-accent:#1e90d2;--photo-accent-soft:rgba(30,144,210,.16);--photo-surface:#f4fbff;}
+  .seguranca-page{--photo-accent:#0a58ca;--photo-accent-soft:rgba(10,88,202,.14);--photo-surface:#edf4fb;}
+  .jardinagem-page{--photo-accent:#4f944e;--photo-accent-soft:rgba(79,148,78,.16);--photo-surface:#f3faf1;}
+  .manutencao-page{--photo-accent:#d58a12;--photo-accent-soft:rgba(213,138,18,.16);--photo-surface:#fffbf3;}
+
+  .modern-photo-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:32px;
+    padding:18px;
+    background:linear-gradient(180deg,#ffffff 0%,var(--photo-surface) 100%);
+    border:1px solid rgba(15,23,42,.06);
+    box-shadow:0 28px 70px rgba(15,23,42,.10);
+    min-height:430px;
+    isolation:isolate;
+  }
+  .modern-photo-card::before{
+    content:"";
+    position:absolute;
+    top:-70px;
+    right:-45px;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:var(--photo-accent-soft);
+    filter:blur(6px);
+    z-index:-1;
+  }
+  .modern-photo-card::after{
+    content:"";
+    position:absolute;
+    left:18px;
+    bottom:18px;
+    width:120px;
+    height:120px;
+    border-radius:28px;
+    background-image: radial-gradient(var(--photo-accent-soft) 2px, transparent 2px);
+    background-size:14px 14px;
+    opacity:.8;
+    z-index:0;
+  }
+  .modern-photo-card img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    display:block;
+    border-radius:24px;
+    box-shadow:0 12px 32px rgba(15,23,42,.14);
+    position:relative;
+    z-index:1;
+  }
+  .photo-badge{
+    position:absolute;
+    top:30px;
+    left:30px;
+    z-index:2;
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+    padding:.72rem 1rem;
+    border-radius:999px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(10px);
+    box-shadow:0 12px 24px rgba(15,23,42,.10);
+    color:#0f172a;
+    font-size:.82rem;
+    font-weight:800;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+  }
+  .photo-badge i{color:var(--photo-accent);font-size:1rem;}
+  .photo-meta-card{
+    position:absolute;
+    right:30px;
+    bottom:30px;
+    z-index:2;
+    max-width:260px;
+    padding:1rem 1.05rem;
+    border-radius:20px;
+    background:rgba(8,15,28,.76);
+    color:#fff;
+    box-shadow:0 18px 36px rgba(15,23,42,.22);
+    backdrop-filter:blur(16px);
+  }
+  .photo-meta-card strong{
+    display:block;
+    font-size:1rem;
+    font-weight:800;
+    margin-bottom:.25rem;
+  }
+  .photo-meta-card span{
+    display:block;
+    color:rgba(255,255,255,.78);
+    font-size:.9rem;
+    line-height:1.45;
+  }
+  .service-detail-image.reveal{
+    opacity:0;
+    transform:translateY(26px) scale(.98);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+  .service-detail-image.reveal.is-visible{
+    opacity:1;
+    transform:none;
+  }
+  @media (max-width: 991.98px){
+    .modern-photo-card{min-height:auto;padding:14px;border-radius:24px;}
+    .photo-badge{top:24px;left:24px;padding:.62rem .85rem;font-size:.74rem;}
+    .photo-meta-card{right:22px;left:22px;bottom:22px;max-width:none;}
+  }
+  @media (max-width: 575.98px){
+    .modern-photo-card img{aspect-ratio:5/4;}
+    .photo-badge{position:static;margin:0 0 12px 0;}
+    .modern-photo-card::after{width:82px;height:82px;left:14px;bottom:14px;}
+    .photo-meta-card{position:static;margin-top:12px;border-radius:16px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .service-detail-image.reveal,.service-detail-image.reveal.is-visible{opacity:1;transform:none;transition:none;}
+  }
+</style>
+
 </head>
-<body>
+<body class="service-page limpeza-page">
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <header class="site-header">
-  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+  <nav class="navbar navbar-expand-xl" aria-label="Navegação principal">
     <div class="container-xl">
       <a class="navbar-brand" href="index.html" aria-label="Prime Terceirizados - Início">
         <img src="assets/img/logo-prime.svg" class="brand-logo" alt="Prime Terceirizados">
@@ -30,60 +159,58 @@
         <i class="bi bi-list fs-2" aria-hidden="true"></i>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-1">
           <li class="nav-item"><a class="nav-link" data-nav href="index.html">Início</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-services-nav href="servicos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
+            <a class="nav-link dropdown-toggle" data-services-nav href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" data-nav href="servicos.html">Visão geral</a></li>
               <li><a class="dropdown-item" data-nav href="limpeza.html">Limpeza profissional</a></li>
               <li><a class="dropdown-item" data-nav href="seguranca.html">Segurança</a></li>
+              <li><a class="dropdown-item" data-nav href="jardinagem.html">Jardinagem</a></li>
+              <li><a class="dropdown-item" data-nav href="manutencao.html">Manutenção</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" data-nav href="sobre.html">A Prime</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#prime">A Prime</a></li>
           <li class="nav-item"><a class="nav-link" data-nav href="contato.html">Contato</a></li>
         </ul>
-        <a class="btn-prime ms-lg-3" href="contato.html#proposta"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> Solicitar proposta</a>
+        <a class="btn-prime ms-xl-3" href="contato.html#proposta"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> Solicitar proposta</a>
       </div>
     </div>
   </nav>
 </header>
-
 <main id="conteudo">
-  <section class="page-hero"><div class="container-xl"><div class="page-intro reveal"><span class="eyebrow">Limpeza profissional</span><h1>Rotinas de limpeza estruturadas para manter o ambiente bem cuidado.</h1><p>O serviço é planejado conforme uso, circulação, horários e prioridades do local, evitando um modelo genérico de execução.</p></div></div></section>
-  <section class="section"><div class="container-xl"><div class="row align-items-center g-5"><div class="col-lg-6 reveal"><div class="detail-visual"><img src="assets/img/limpeza-pg.webp" alt="Ilustração de profissional de limpeza e equipamentos"></div></div><div class="col-lg-6 reveal"><span class="eyebrow">Escopo</span><h2 class="mt-3">O que pode compor a rotina.</h2><p>As atividades são definidas de acordo com a necessidade do cliente e as características do ambiente.</p><div class="scope-list mt-4">
-    <div class="scope-item"><i class="bi bi-check2-circle"></i><div><strong>Limpeza e conservação</strong><p>Rotinas para áreas de uso comum, administrativas e de circulação.</p></div></div>
-    <div class="scope-item"><i class="bi bi-check2-circle"></i><div><strong>Higienização de superfícies</strong><p>Execução conforme frequência e pontos definidos no escopo.</p></div></div>
-    <div class="scope-item"><i class="bi bi-check2-circle"></i><div><strong>Organização da rotina</strong><p>Atividades distribuídas conforme horários e prioridades do local.</p></div></div>
-    <div class="scope-item"><i class="bi bi-check2-circle"></i><div><strong>Acompanhamento do serviço</strong><p>Alinhamento do escopo para manter clareza sobre a execução.</p></div></div>
-  </div></div></div></div></section>
-  <section class="section section-soft"><div class="container-xl"><div class="section-title reveal"><span class="eyebrow">Aplicação</span><h2>Uma rotina coerente com o tipo de ambiente.</h2><p class="lead-copy">A necessidade de uma recepção, escritório, condomínio ou clínica pode ser diferente. Por isso, frequência e atividades devem ser definidas antes da implantação.</p></div><div class="row g-3">
-    <div class="col-md-4 reveal"><div class="card-clean feature-card"><div class="icon-box"><i class="bi bi-buildings"></i></div><h3>Ambientes corporativos</h3><p>Rotinas alinhadas ao fluxo de colaboradores e visitantes.</p></div></div>
-    <div class="col-md-4 reveal"><div class="card-clean feature-card"><div class="icon-box"><i class="bi bi-building"></i></div><h3>Condomínios</h3><p>Cuidados definidos para áreas comuns e circulação.</p></div></div>
-    <div class="col-md-4 reveal"><div class="card-clean feature-card"><div class="icon-box"><i class="bi bi-heart-pulse"></i></div><h3>Clínicas e estabelecimentos</h3><p>Planejamento compatível com atendimento ao público e rotina interna.</p></div></div>
-  </div></div></section>
-  <section class="section-sm"><div class="container-xl"><div class="cta-panel reveal"><div class="row align-items-center g-4 position-relative cta-content"><div class="col-lg-8"><h2 class="mb-3">Precisa de uma proposta para limpeza profissional?</h2><p class="mb-0">Conte o tipo de ambiente, horários e necessidade principal.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-neutral" href="contato.html?servico=limpeza#proposta">Solicitar proposta</a></div></div></div></div></section>
+  <section class="page-hero service-page-hero service-hero-unique"><div class="container-xl"><div class="row align-items-end g-4"><div class="col-lg-8"><div class="page-intro reveal"><span class="eyebrow">Limpeza profissional</span><h1>Limpeza planejada para o uso real de cada ambiente.</h1><p>Serviços de limpeza, conservação e higienização para diferentes ambientes, incluindo possibilidades de limpeza hospitalar e pós-obra.</p></div></div><div class="col-lg-4 reveal"><a class="btn-prime" href="contato.html#proposta">Solicitar proposta <i class="bi bi-arrow-right"></i></a></div></div></div></section>
+  <section class="section service-overview"><div class="container-xl"><div class="row align-items-center g-5"><div class="col-lg-6 reveal"><div class="detail-visual service-detail-image modern-photo-card reveal"><span class="photo-badge"><i class="bi bi-stars"></i> Limpeza profissional</span><img src="assets/img/limpeza-destaque.png" alt="Equipe de limpeza profissional em lobby corporativo moderno"></div></div><div class="col-lg-6 reveal"><span class="eyebrow">Como pode funcionar</span><h2 class="mt-3">Escopo organizado conforme o ambiente e a necessidade.</h2><p class="lead-copy">Antes da implantação, é importante compreender as características do local, a frequência esperada, os horários e as atividades necessárias. A proposta é construída com base nessas informações.</p><ul class="check-list mt-4"><li><i class="bi bi-check-circle-fill"></i><span>Frequência e horários definidos de acordo com a utilização do local.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Dimensionamento das atividades conforme área, fluxo e prioridade.</span></li><li><i class="bi bi-check-circle-fill"></i><span>Produtos, equipamentos e procedimentos alinhados ao escopo contratado.</span></li></ul><div class="notice-box mt-4"><strong>Importante:</strong> Ambientes hospitalares, serviços em altura, uso de produtos específicos ou outras atividades de maior criticidade precisam de avaliação técnica e definição contratual apropriada.</div></div></div></div></section>
+  <section class="section cleaning-specialties service-specialties"><div class="container-xl"><div class="section-title reveal"><span class="eyebrow">Especializações em limpeza</span><h2>Escopos com necessidades diferentes exigem planejamento diferente.</h2></div><div class="row g-4">
+  <div class="col-lg-6 reveal"><article class="specialty-detail h-100"><div class="specialty-icon"><i class="bi bi-hospital"></i></div><h3>Limpeza hospitalar</h3><p>Ambientes assistenciais exigem rotinas de higienização organizadas conforme criticidade, fluxo e procedimentos definidos pela instituição. O escopo pode prever sequências de limpeza, atenção a pontos de contato, separação de materiais e cuidados operacionais compatíveis com o ambiente.</p><ul><li>Áreas administrativas e de circulação.</li><li>Sanitários, recepções e áreas de apoio.</li><li>Rotinas compatíveis com procedimentos internos do contratante.</li></ul><p class="small muted mb-0">Protocolos, produtos e procedimentos devem ser validados conforme as exigências do estabelecimento e normas aplicáveis.</p></article></div>
+  <div class="col-lg-6 reveal"><article class="specialty-detail h-100"><div class="specialty-icon"><i class="bi bi-bricks"></i></div><h3>Limpeza pós-obra</h3><p>Após reformas ou obras, o objetivo é preparar o ambiente para entrega e utilização, com atenção à poeira fina, resíduos leves, respingos, superfícies e acabamentos que precisam de limpeza cuidadosa.</p><ul><li>Remoção de poeira de superfícies acessíveis.</li><li>Limpeza de pisos, vidros e pontos definidos no escopo.</li><li>Acabamento final para preparação do ambiente.</li></ul><p class="small muted mb-0">Resíduos de construção, remoções técnicas e serviços em altura devem ser avaliados separadamente conforme condições e responsabilidade aplicável.</p></article></div>
+</div></div></section>
+  <section class="section section-soft service-scope"><div class="container-xl"><div class="section-title reveal"><span class="eyebrow">Possibilidades de escopo</span><h2>Atividades que podem compor o serviço.</h2><p class="lead-copy">A composição abaixo apresenta possibilidades gerais. O escopo final deve ser definido na proposta contratual.</p></div><div class="row g-3"><div class="col-md-6"><div class="scope-item"><i class="bi bi-building"></i><div><h3>Rotina corporativa</h3><p>Conservação de ambientes administrativos, recepções, salas e áreas compartilhadas.</p></div></div></div><div class="col-md-6"><div class="scope-item"><i class="bi bi-droplet"></i><div><h3>Higienização</h3><p>Procedimentos de limpeza e higienização compatíveis com superfícies e áreas definidas.</p></div></div></div><div class="col-md-6"><div class="scope-item"><i class="bi bi-hospital"></i><div><h3>Ambientes assistenciais</h3><p>Possibilidade de estruturar rotinas específicas para ambientes hospitalares e de saúde.</p></div></div></div><div class="col-md-6"><div class="scope-item"><i class="bi bi-bricks"></i><div><h3>Pós-obra</h3><p>Preparação e acabamento de ambientes após obras ou reformas, conforme avaliação do local.</p></div></div></div></div></div></section>
+  <section class="section-sm service-cta-wrap"><div class="container-xl"><div class="cta-panel reveal"><div class="row align-items-center g-4 position-relative cta-content"><div class="col-lg-8"><h2 class="mb-3">Precisa estruturar limpeza profissional para sua operação?</h2><p class="mb-0">Envie o contexto do local, frequência e principais necessidades para direcionarmos o atendimento.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-neutral" href="contato.html?servico=limpeza#proposta">Solicitar proposta</a></div></div></div></div></section>
 </main>
 <footer class="site-footer">
   <div class="container-xl">
     <div class="row g-4 align-items-start">
-      <div class="col-lg-6">
+      <div class="col-lg-5">
         <img src="assets/img/logo-prime.svg" class="footer-logo mb-3" alt="Prime Terceirizados">
-        <p class="mb-0 footer-summary">Serviços terceirizados de limpeza profissional e segurança, estruturados conforme a rotina de cada operação.</p>
+        <p class="mb-0 footer-summary">Soluções terceirizadas para limpeza, segurança, jardinagem e manutenção, organizadas conforme a rotina e o escopo de cada operação.</p>
       </div>
       <div class="col-6 col-lg-3">
         <h5 class="h6 mb-3">Navegação</h5>
         <ul class="footer-links">
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="sobre.html">A Prime</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="index.html#prime">A Prime</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
-      <div class="col-6 col-lg-3">
+      <div class="col-6 col-lg-4">
         <h5 class="h6 mb-3">Soluções</h5>
-        <ul class="footer-links">
+        <ul class="footer-links footer-links-columns">
           <li><a href="limpeza.html">Limpeza profissional</a></li>
           <li><a href="seguranca.html">Segurança</a></li>
+          <li><a href="jardinagem.html">Jardinagem</a></li>
+          <li><a href="manutencao.html">Manutenção</a></li>
           <li><a href="privacidade.html">Privacidade</a></li>
         </ul>
       </div>

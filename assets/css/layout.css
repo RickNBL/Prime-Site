@@ -4,12 +4,18 @@
   z-index: 1030;
   min-height: var(--header-height);
   height: auto;
-  background: rgba(255, 255, 255, .96);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(223, 231, 239, .9);
+  background: rgba(255, 255, 255, .97);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(223, 231, 239, .95);
+  box-shadow: 0 8px 28px rgba(13, 41, 68, .07);
 }
 .site-header .navbar { min-height: var(--header-height); padding: 0; }
-.brand-logo { width: 92px; height: 64px; object-fit: contain; }
+.brand-logo {
+  width: 92px;
+  height: 64px;
+  object-fit: contain;
+}
+
 .navbar-nav .nav-link {
   color: #33465a;
   font-weight: 700;
@@ -17,11 +23,13 @@
   border-radius: 12px;
   transition: color var(--transition), background-color var(--transition);
 }
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--prime-blue);
   background: #eff5fc;
 }
+
 .dropdown-menu {
   border: 1px solid var(--prime-line);
   box-shadow: var(--shadow-md);

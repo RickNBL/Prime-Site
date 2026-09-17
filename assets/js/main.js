@@ -19,7 +19,7 @@
     }
   });
 
-  const servicePages = ['servicos.html', 'limpeza.html', 'seguranca.html'];
+  const servicePages = ['limpeza.html', 'seguranca.html', 'jardinagem.html', 'manutencao.html'];
   if (servicePages.includes(currentFile)) {
     const serviceTrigger = document.querySelector('[data-services-nav]');
     if (serviceTrigger) serviceTrigger.classList.add('active');
@@ -29,7 +29,7 @@
   if (navbarCollapse && window.bootstrap) {
     navbarCollapse.querySelectorAll('a:not(.dropdown-toggle)').forEach((link) => {
       link.addEventListener('click', () => {
-        if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+        if (window.innerWidth < 1200 && navbarCollapse.classList.contains('show')) {
           bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
         }
       });

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a58ca">
+  <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="index, follow">
-  <title>Prime Terceirizados | Limpeza e Segurança</title>
-  <meta name="description" content="Serviços terceirizados de limpeza profissional e segurança para empresas, condomínios e operações corporativas.">
+  <title>Prime Terceirizados | Facilities e Serviços Terceirizados</title>
+  <meta name="description" content="Serviços terceirizados de limpeza profissional, segurança, jardinagem e manutenção para empresas, condomínios e operações corporativas.">
   <script src="assets/js/theme-init.js"></script>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -19,11 +19,11 @@
   <link rel="stylesheet" href="assets/css/accessibility.css">
   <link rel="stylesheet" href="assets/css/home.css">
 </head>
-<body>
+<body class="home-page">
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 <header class="site-header">
-  <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
-    <div class="container-xl">
+  <nav class="navbar navbar-expand-xl" aria-label="Navegação principal">
+    <div class="container-xl header-home-shell">
       <a class="navbar-brand" href="index.html" aria-label="Prime Terceirizados - Início">
         <img src="assets/img/logo-prime.svg" class="brand-logo" alt="Prime Terceirizados">
       </a>
@@ -31,136 +31,231 @@
         <i class="bi bi-list fs-2" aria-hidden="true"></i>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-1 home-nav-pill">
           <li class="nav-item"><a class="nav-link" data-nav href="index.html">Início</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-services-nav href="servicos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
+            <a class="nav-link dropdown-toggle" data-services-nav href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" data-nav href="servicos.html">Visão geral</a></li>
               <li><a class="dropdown-item" data-nav href="limpeza.html">Limpeza profissional</a></li>
               <li><a class="dropdown-item" data-nav href="seguranca.html">Segurança</a></li>
+              <li><a class="dropdown-item" data-nav href="jardinagem.html">Jardinagem</a></li>
+              <li><a class="dropdown-item" data-nav href="manutencao.html">Manutenção</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" data-nav href="sobre.html">A Prime</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prime">A Prime</a></li>
           <li class="nav-item"><a class="nav-link" data-nav href="contato.html">Contato</a></li>
         </ul>
-        <a class="btn-prime ms-lg-3" href="contato.html#proposta"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> Solicitar proposta</a>
+        <a class="btn-prime ms-xl-3" href="contato.html#proposta"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> Solicitar proposta</a>
       </div>
     </div>
   </nav>
 </header>
 
 <main id="conteudo">
-  <section class="home-hero-dynamic">
-    <div class="container-xl hero-content">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 reveal">
-          <span class="hero-tag"><i class="bi bi-buildings" aria-hidden="true"></i> Facilities e terceirização</span>
-          <h1 class="hero-title">Uma rotina mais organizada começa com os <span class="accent">profissionais certos.</span></h1>
-          <p class="hero-text">Limpeza profissional e segurança estruturadas conforme o ambiente, a rotina e os procedimentos de cada operação.</p>
-          <div class="hero-actions d-flex flex-wrap gap-3">
-            <a class="btn-prime" href="contato.html#proposta">Solicitar proposta <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-            <a class="btn-prime-outline" href="servicos.html">Conhecer os serviços</a>
-          </div>
-          <div class="hero-proof" aria-label="Características do atendimento">
-            <span><i class="bi bi-clipboard-check" aria-hidden="true"></i> Escopo alinhado ao local</span>
-            <span><i class="bi bi-people" aria-hidden="true"></i> Equipe adequada à rotina</span>
-            <span><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Processo com continuidade</span>
-          </div>
-        </div>
+  <section class="home-hero-premium" aria-labelledby="home-title" data-scroll-hero>
+    <div class="hero-premium-image" aria-hidden="true"></div>
+    <div class="hero-premium-overlay" aria-hidden="true"></div>
 
-        <div class="col-lg-6 reveal">
-          <div class="home-showcase" data-home-showcase>
-            <div class="showcase-image-wrap">
-              <img class="showcase-image" data-showcase-image src="assets/img/home-prime.webp" width="1600" height="1200" alt="Profissionais da Prime Terceirizados em ambiente corporativo">
-              <div class="showcase-caption" aria-live="polite">
-                <small data-showcase-kicker>Visão integrada</small>
-                <strong data-showcase-title>Limpeza profissional e segurança integradas à rotina da sua operação.</strong>
-              </div>
+    <div class="container-xl hero-premium-grid hero-simple-grid">
+      <div class="hero-premium-copy reveal reveal-up assemble-heading">
+        <span class="hero-kicker light">Prime Terceirizados</span>
+        <h1 id="home-title">Serviços que <span>cuidam da sua operação.</span></h1>
+        <p>Limpeza, segurança, jardinagem e manutenção com organização e atendimento profissional.</p>
+        <div class="hero-actions hero-actions-left">
+          <a class="btn-prime" href="contato.html#proposta">Solicitar proposta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          <a class="btn-prime-ghost" href="#servicos">Conhecer serviços</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-xl hero-value-strip-wrap">
+      <div class="hero-value-strip reveal reveal-zoom assemble-strip">
+        <article>
+          <span class="value-strip-bar" aria-hidden="true"></span>
+          <h3>Escopo claro</h3>
+          <p>Atividades, frequência e responsabilidades organizadas conforme a necessidade do ambiente.</p>
+        </article>
+        <article>
+          <span class="value-strip-bar" aria-hidden="true"></span>
+          <h3>Atendimento sob medida</h3>
+          <p>Soluções combinadas de acordo com o fluxo, o perfil do local e as prioridades da operação.</p>
+        </article>
+        <article>
+          <span class="value-strip-bar" aria-hidden="true"></span>
+          <h3>Presença profissional</h3>
+          <p>Equipes alinhadas à apresentação, à rotina e ao padrão esperado para cada tipo de espaço.</p>
+        </article>
+        <article>
+          <span class="value-strip-bar" aria-hidden="true"></span>
+          <h3>Continuidade operacional</h3>
+          <p>Organização do serviço para contribuir com a rotina e com o bom funcionamento do ambiente.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-featured" id="servicos" aria-labelledby="services-title">
+    <div class="container-xl">
+      <div class="home-heading center reveal reveal-up assemble-heading">
+        <span class="hero-kicker">Nossas soluções</span>
+        <h2 id="services-title">Serviços apresentados de forma clara, visual e fácil de entender.</h2>
+        <p>Em vez de uma rolagem dinâmica mais complexa, a Home agora mostra cada serviço em blocos próprios, com imagem e conteúdo lado a lado. Assim, fica mais simples identificar o que a Prime oferece.</p>
+      </div>
+
+      <div class="service-feature-list">
+        <article class="service-feature">
+          <div class="service-feature-media reveal reveal-left delay-1">
+            <div class="service-feature-shape service-feature-photo service-blob-left">
+              <img src="assets/img/home-limpeza.png" alt="Equipe realizando limpeza profissional em ambiente corporativo" loading="lazy">
             </div>
-            <div class="showcase-controls" aria-label="Alterar destaque da apresentação">
-              <button type="button" class="showcase-control" data-showcase-target="equipe" aria-pressed="true">Visão geral</button>
-              <button type="button" class="showcase-control" data-showcase-target="limpeza" aria-pressed="false">Limpeza</button>
-              <button type="button" class="showcase-control" data-showcase-target="seguranca" aria-pressed="false">Segurança</button>
-            </div>
+            <span class="service-feature-dots" aria-hidden="true"></span>
           </div>
+          <div class="service-feature-copy reveal reveal-right delay-2 assemble-copy">
+            <span class="service-feature-kicker">Limpeza profissional</span>
+            <h3>Higienização, conservação e cuidado contínuo para ambientes que precisam manter boa apresentação todos os dias.</h3>
+            <p>A Prime organiza rotinas de limpeza profissional de acordo com o tipo de ambiente, a frequência necessária e o fluxo de circulação. O objetivo é manter áreas internas e externas compatíveis com a rotina do cliente e com o padrão esperado para o espaço.</p>
+            <ul>
+              <li>Limpeza hospitalar para ambientes com exigência maior de organização e cuidado</li>
+              <li>Limpeza pós-obra para entrega, ocupação ou retomada da operação</li>
+              <li>Limpeza corporativa e conservação de áreas comuns, recepções e escritórios</li>
+            </ul>
+            <a class="service-card-link" href="limpeza.html">Conhecer limpeza profissional <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="service-feature service-feature-reverse">
+          <div class="service-feature-media reveal reveal-right delay-1">
+            <div class="service-feature-shape service-feature-photo service-blob-right">
+              <img src="assets/img/home-seguranca.png" alt="Profissionais de segurança em ambiente corporativo" loading="lazy">
+            </div>
+            <span class="service-feature-dots service-feature-dots-right" aria-hidden="true"></span>
+          </div>
+          <div class="service-feature-copy reveal reveal-left delay-2 assemble-copy">
+            <span class="service-feature-kicker">Segurança</span>
+            <h3>Presença profissional para apoiar rotinas de vigilância, proteção patrimonial e organização do ambiente.</h3>
+            <p>O serviço de segurança é estruturado conforme a natureza do local e os procedimentos definidos para a operação. A proposta é contribuir para a proteção do espaço, o controle das rotinas previstas e a organização do fluxo de pessoas.</p>
+            <ul>
+              <li>Apoio operacional alinhado aos procedimentos e ao perfil do ambiente</li>
+              <li>Atuação compatível com empreendimentos corporativos, residenciais e comerciais</li>
+              <li>Presença profissional integrada à rotina e às prioridades do cliente</li>
+            </ul>
+            <a class="service-card-link" href="seguranca.html">Conhecer segurança <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="service-feature">
+          <div class="service-feature-media reveal reveal-left delay-1">
+            <div class="service-feature-shape service-feature-photo service-blob-left">
+              <img src="assets/img/home-jardinagem.png" alt="Ilustração de jardinagem e cuidado de áreas verdes" loading="lazy">
+            </div>
+            <span class="service-feature-dots" aria-hidden="true"></span>
+          </div>
+          <div class="service-feature-copy reveal reveal-right delay-2 assemble-copy">
+            <span class="service-feature-kicker">Jardinagem</span>
+            <h3>Áreas verdes bem cuidadas ajudam a valorizar a imagem do espaço e a experiência de quem circula por ele.</h3>
+            <p>A jardinagem pode fazer parte de uma operação mais completa de facilities, contribuindo para a conservação de jardins, canteiros, gramados e áreas de convivência externas. O atendimento é ajustado ao porte e à proposta estética de cada ambiente.</p>
+            <ul>
+              <li>Cuidados com gramados, canteiros, arbustos e plantas ornamentais</li>
+              <li>Rotinas periódicas para conservação de áreas verdes e externas</li>
+              <li>Apoio à apresentação visual e ao ordenamento do ambiente</li>
+            </ul>
+            <a class="service-card-link" href="jardinagem.html">Conhecer jardinagem <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="service-feature service-feature-reverse">
+          <div class="service-feature-media reveal reveal-right delay-1">
+            <div class="service-feature-shape service-feature-photo service-blob-right">
+              <img src="assets/img/home-manutencao.png" alt="Ilustração de manutenção predial" loading="lazy">
+            </div>
+            <span class="service-feature-dots service-feature-dots-right" aria-hidden="true"></span>
+          </div>
+          <div class="service-feature-copy reveal reveal-left delay-2 assemble-copy">
+            <span class="service-feature-kicker">Manutenção</span>
+            <h3>Suporte predial para demandas preventivas e corretivas previstas no escopo do serviço.</h3>
+            <p>A manutenção ajuda a sustentar a rotina do ambiente e a organizar necessidades recorrentes da operação predial. Cada atividade é planejada de acordo com o contrato, com o tipo de instalação e com as prioridades definidas para o local.</p>
+            <ul>
+              <li>Rotinas preventivas alinhadas à necessidade do ambiente</li>
+              <li>Apoio a demandas corretivas contempladas na proposta contratada</li>
+              <li>Atendimento organizado para preservar funcionamento e apresentação do espaço</li>
+            </ul>
+            <a class="service-card-link" href="manutencao.html">Conhecer manutenção <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-specialties" aria-labelledby="specialties-title">
+    <div class="container-xl">
+      <div class="home-heading center reveal reveal-up assemble-heading">
+        <span class="hero-kicker">Especialidades em limpeza</span>
+        <h2 id="specialties-title">A limpeza é ajustada conforme a exigência e a finalidade de cada ambiente.</h2>
+        <p>Mais do que executar tarefas genéricas, a Prime pode organizar a limpeza conforme o contexto do local, o nível de criticidade e o objetivo da contratação.</p>
+      </div>
+
+      <div class="specialties-grid">
+        <article class="specialty-card reveal reveal-up delay-1">
+          <span class="specialty-icon"><i class="bi bi-hospital" aria-hidden="true"></i></span>
+          <h3>Limpeza hospitalar</h3>
+          <p>Rotinas estruturadas para ambientes de saúde e áreas que exigem maior cuidado, seguindo critérios compatíveis com a operação prevista para o local.</p>
+        </article>
+        <article class="specialty-card reveal reveal-up delay-2">
+          <span class="specialty-icon"><i class="bi bi-building-gear" aria-hidden="true"></i></span>
+          <h3>Limpeza pós-obra</h3>
+          <p>Preparação do ambiente após obras, reformas ou intervenções, com foco na remoção de resíduos e na organização do espaço para uso.</p>
+        </article>
+        <article class="specialty-card reveal reveal-up delay-3">
+          <span class="specialty-icon"><i class="bi bi-buildings" aria-hidden="true"></i></span>
+          <h3>Limpeza corporativa</h3>
+          <p>Conservação recorrente de escritórios, recepções, áreas comuns e locais de circulação, organizada conforme o fluxo operacional.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-about" id="prime" aria-labelledby="about-title">
+    <div class="container-xl">
+      <div class="about-panel">
+        <div class="about-logo-watermark" aria-hidden="true"><img src="assets/img/logo-prime.svg" alt=""></div>
+        <div class="about-copy reveal reveal-left assemble-heading">
+          <span class="hero-kicker">A Prime</span>
+          <h2 id="about-title">Uma empresa que reúne diferentes frentes de apoio para quem precisa terceirizar com mais organização.</h2>
+          <p>A Prime Terceirizados atende operações que demandam suporte contínuo para limpeza, segurança, jardinagem e manutenção. O foco está em estruturar o serviço conforme a realidade do cliente, sem complicar o entendimento do que será executado.</p>
+          <p>Com a nova organização da Home, cada solução aparece em um bloco próprio, com linguagem mais objetiva e visual mais claro. Isso facilita a navegação e torna a apresentação da empresa mais direta para quem visita o site pela primeira vez.</p>
+        </div>
+        <div class="about-values reveal reveal-right assemble-values">
+          <div><span class="about-value-icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><h3>Clareza operacional</h3><p>Entendimento prévio das atividades, frequência e responsabilidades que fazem parte do serviço.</p></div>
+          <div><span class="about-value-icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span><h3>Comunicação objetiva</h3><p>Informações claras para implantação, acompanhamento e alinhamentos previstos na rotina.</p></div>
+          <div><span class="about-value-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><h3>Soluções integradas</h3><p>Possibilidade de combinar diferentes frentes de apoio de acordo com a necessidade da operação.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="home-strip-dynamic" aria-label="Como a Prime organiza o atendimento">
+  <section class="home-process" aria-labelledby="process-title">
     <div class="container-xl">
-      <div class="row">
-        <div class="col-md-4"><div class="strip-item"><i class="bi bi-check2-circle" aria-hidden="true"></i> Entendimento da necessidade</div></div>
-        <div class="col-md-4"><div class="strip-item"><i class="bi bi-card-checklist" aria-hidden="true"></i> Definição clara do escopo</div></div>
-        <div class="col-md-4"><div class="strip-item"><i class="bi bi-chat-square-text" aria-hidden="true"></i> Comunicação objetiva</div></div>
+      <div class="home-heading center reveal reveal-up assemble-heading">
+        <span class="hero-kicker">Como funciona</span>
+        <h2 id="process-title">Um processo simples, do primeiro contato até a rotina operacional.</h2>
+        <p>O atendimento comercial parte do entendimento da necessidade e segue para definição do escopo, implantação do serviço e acompanhamento da operação.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card reveal reveal-up delay-1"><i class="bi bi-search" aria-hidden="true"></i><h3>Entendimento da necessidade</h3><p>Levantamento inicial do ambiente, dos horários, do fluxo e dos pontos prioritários para o atendimento.</p></article>
+        <article class="process-card reveal reveal-up delay-2"><i class="bi bi-list-check" aria-hidden="true"></i><h3>Definição do escopo</h3><p>Organização das atividades, rotinas, frequências e responsabilidades compatíveis com o serviço solicitado.</p></article>
+        <article class="process-card reveal reveal-up delay-3"><i class="bi bi-play-circle" aria-hidden="true"></i><h3>Implantação da operação</h3><p>Preparação do atendimento para início do serviço dentro das condições acordadas entre as partes.</p></article>
+        <article class="process-card reveal reveal-up delay-4"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><h3>Acompanhamento contínuo</h3><p>Comunicação para alinhamentos, continuidade da execução e ajustes previstos durante a operação.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="section home-services">
+  <section class="home-cta">
     <div class="container-xl">
-      <div class="section-title reveal">
-        <span class="eyebrow">Serviços</span>
-        <h2>Duas soluções para apoiar a rotina do seu espaço.</h2>
-        <p class="lead-copy">Conheça o foco de cada serviço e veja qual faz sentido para a sua operação.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-12 col-lg-6 reveal">
-          <article class="service-card h-100">
-            <div class="service-card-image"><img src="assets/img/limpeza-home.webp" width="1600" height="1200" alt="Equipe realizando limpeza profissional em ambiente corporativo"></div>
-            <div class="service-card-content">
-              <div class="icon-box service-icon"><i class="bi bi-stars" aria-hidden="true"></i></div>
-              <h3>Limpeza profissional</h3>
-              <p>Rotinas de limpeza, conservação e higienização organizadas conforme o perfil e o uso do ambiente.</p>
-              <a class="service-link" href="limpeza.html">Conhecer o serviço <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-        </div>
-        <div class="col-12 col-lg-6 reveal">
-          <article class="service-card h-100">
-            <div class="service-card-image"><img src="assets/img/seguranca-home.webp" width="1600" height="1200" alt="Profissionais de segurança em ambiente corporativo"></div>
-            <div class="service-card-content">
-              <div class="icon-box service-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
-              <h3>Segurança</h3>
-              <p>Apoio à segurança do ambiente com atuação alinhada aos procedimentos definidos para cada operação.</p>
-              <a class="service-link" href="seguranca.html">Conhecer o serviço <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-soft">
-    <div class="container-xl">
-      <div class="row align-items-end g-4 mb-4">
-        <div class="col-lg-7 reveal process-heading">
-          <span class="eyebrow">Como trabalhamos</span>
-          <h2 class="mt-3 mb-0">Do entendimento do local à rotina de operação.</h2>
-        </div>
-        <div class="col-lg-5 reveal"><p class="process-note mb-0">O processo é organizado em etapas simples para definir o que precisa ser feito e como o serviço deve funcionar.</p></div>
-      </div>
-      <div class="row g-3">
-        <div class="col-md-4 reveal"><div class="card-clean step-card"><div class="step-index">01</div><h3>Entendimento</h3><p>Levantamento do ambiente, horários, fluxo e atividades necessárias.</p></div></div>
-        <div class="col-md-4 reveal"><div class="card-clean step-card"><div class="step-index">02</div><h3>Definição</h3><p>Organização do escopo e alinhamento do perfil adequado à rotina.</p></div></div>
-        <div class="col-md-4 reveal"><div class="card-clean step-card"><div class="step-index">03</div><h3>Operação</h3><p>Implantação do serviço com responsabilidades e comunicação definidas.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-sm">
-    <div class="container-xl">
-      <div class="cta-panel reveal">
-        <div class="row align-items-center g-4 position-relative cta-content">
-          <div class="col-lg-8">
-            <span class="eyebrow text-white">Solicitação comercial</span>
-            <h2 class="mt-3 mb-3">Conte o que sua operação precisa.</h2>
-            <p class="mb-0">Envie as informações essenciais para iniciarmos o atendimento comercial.</p>
-          </div>
-          <div class="col-lg-4 text-lg-end"><a class="btn-neutral" href="contato.html#proposta">Solicitar proposta <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
-        </div>
+      <div class="home-cta-panel reveal reveal-zoom assemble-heading">
+        <span class="hero-kicker">Solicitação comercial</span>
+        <h2>Conte o que a sua operação precisa.</h2>
+        <p>Envie as informações principais do ambiente e dos serviços desejados para direcionarmos o atendimento comercial da Prime.</p>
+        <a class="btn-prime" href="contato.html#proposta">Solicitar proposta <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </div>
   </section>
@@ -169,17 +264,28 @@
 <footer class="site-footer">
   <div class="container-xl">
     <div class="row g-4 align-items-start">
-      <div class="col-lg-6">
+      <div class="col-lg-5">
         <img src="assets/img/logo-prime.svg" class="footer-logo mb-3" alt="Prime Terceirizados">
-        <p class="mb-0 footer-summary">Serviços terceirizados de limpeza profissional e segurança, estruturados conforme a rotina de cada operação.</p>
+        <p class="mb-0 footer-summary">Soluções terceirizadas para limpeza, segurança, jardinagem e manutenção, organizadas conforme a rotina e o escopo de cada operação.</p>
       </div>
       <div class="col-6 col-lg-3">
         <h5 class="h6 mb-3">Navegação</h5>
-        <ul class="footer-links"><li><a href="servicos.html">Serviços</a></li><li><a href="sobre.html">A Prime</a></li><li><a href="contato.html">Contato</a></li></ul>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="index.html#prime">A Prime</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
       </div>
-      <div class="col-6 col-lg-3">
+      <div class="col-6 col-lg-4">
         <h5 class="h6 mb-3">Soluções</h5>
-        <ul class="footer-links"><li><a href="limpeza.html">Limpeza profissional</a></li><li><a href="seguranca.html">Segurança</a></li><li><a href="privacidade.html">Privacidade</a></li></ul>
+        <ul class="footer-links footer-links-columns">
+          <li><a href="limpeza.html">Limpeza profissional</a></li>
+          <li><a href="seguranca.html">Segurança</a></li>
+          <li><a href="jardinagem.html">Jardinagem</a></li>
+          <li><a href="manutencao.html">Manutenção</a></li>
+          <li><a href="privacidade.html">Privacidade</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom d-flex justify-content-between gap-3 flex-wrap">
