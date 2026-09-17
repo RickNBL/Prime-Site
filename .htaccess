@@ -13,23 +13,10 @@ DirectoryIndex index.html
   AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
 </IfModule>
 
-
-# Evita que versões antigas do HTML/CSS/JS permaneçam presas no navegador
-# ou em cache intermediário durante as atualizações do site.
-<IfModule mod_headers.c>
-  <FilesMatch "\.(html?|css|js)$">
-    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
-  </FilesMatch>
-</IfModule>
-
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 0 seconds"
-  ExpiresByType application/javascript "access plus 0 seconds"
-  ExpiresByType text/javascript "access plus 0 seconds"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
   ExpiresByType image/svg+xml "access plus 30 days"
   ExpiresByType image/webp "access plus 30 days"
   ExpiresByType image/png "access plus 30 days"
