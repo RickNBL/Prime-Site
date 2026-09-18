@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="assets/css/pages.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/accessibility.css">
-  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/home.css?v=20260918-2">
   <link rel="stylesheet" href="assets/css/mobile.css">
-  <link rel="stylesheet" href="assets/css/mobile-fix.css?v=20260917-2">
+  <link rel="stylesheet" href="assets/css/mobile-fix.css?v=20260918-2">
 </head>
 <body class="home-page">
 <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -35,6 +35,7 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-1 home-nav-pill">
           <li class="nav-item"><a class="nav-link" data-nav href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prime">A Prime</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-services-nav href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
             <ul class="dropdown-menu">
@@ -44,7 +45,6 @@
               <li><a class="dropdown-item" data-nav href="manutencao.html">Manutenção</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#prime">A Prime</a></li>
           <li class="nav-item"><a class="nav-link" data-nav href="contato.html">Contato</a></li>
         </ul>
         <a class="btn-prime ms-xl-3" href="contato.html#proposta"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> Solicitar proposta</a>
@@ -69,29 +69,53 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="container-xl hero-value-strip-wrap">
-      <div class="hero-value-strip reveal reveal-zoom assemble-strip">
-        <article>
-          <span class="value-strip-bar" aria-hidden="true"></span>
-          <h3>Escopo claro</h3>
-          <p>Atividades, frequência e responsabilidades organizadas conforme a necessidade do ambiente.</p>
-        </article>
-        <article>
-          <span class="value-strip-bar" aria-hidden="true"></span>
-          <h3>Atendimento sob medida</h3>
-          <p>Soluções combinadas de acordo com o fluxo, o perfil do local e as prioridades da operação.</p>
-        </article>
-        <article>
-          <span class="value-strip-bar" aria-hidden="true"></span>
-          <h3>Presença profissional</h3>
-          <p>Equipes alinhadas à apresentação, à rotina e ao padrão esperado para cada tipo de espaço.</p>
-        </article>
-        <article>
-          <span class="value-strip-bar" aria-hidden="true"></span>
-          <h3>Continuidade operacional</h3>
-          <p>Organização do serviço para contribuir com a rotina e com o bom funcionamento do ambiente.</p>
-        </article>
+  <section class="home-experience" aria-labelledby="experience-title">
+    <div class="container-xl">
+      <div class="experience-panel reveal reveal-up">
+        <div class="experience-mark" aria-label="4 anos de prestação de serviços">
+          <span class="experience-number">4</span>
+          <div class="experience-unit">
+            <strong>anos</strong>
+            <span>de prestação de serviços</span>
+          </div>
+        </div>
+        <div class="experience-copy">
+          <span class="hero-kicker">Trajetória Prime</span>
+          <h2 id="experience-title">Uma trajetória construída com cuidado, organização e presença profissional.</h2>
+          <p>Há 4 anos, a Prime atua na prestação de serviços terceirizados, desenvolvendo uma trajetória voltada às necessidades de cada ambiente e à rotina de cada operação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="home-about" id="prime" aria-labelledby="about-title">
+    <div class="container-xl">
+      <div class="about-panel">
+        <div class="about-logo-watermark" aria-hidden="true"><img src="assets/img/logo-prime.svg" alt=""></div>
+        <div class="about-copy reveal reveal-left assemble-heading">
+          <span class="hero-kicker">A Prime</span>
+          <h2 id="about-title">Uma empresa que reúne diferentes frentes de apoio para quem precisa terceirizar com mais organização.</h2>
+          <p>A Prime Terceirizados atende operações que demandam suporte contínuo para limpeza, segurança, jardinagem e manutenção. O foco está em estruturar o serviço conforme a realidade do cliente, sem complicar o entendimento do que será executado.</p>
+          <p>Cada solução é apresentada de forma clara e objetiva, facilitando o entendimento do serviço e a definição de um escopo compatível com as necessidades de cada operação.</p>
+        </div>
+        <div class="about-video-card reveal reveal-right" aria-label="Animação da identidade visual da Prime Terceirizados">
+          <div class="about-video-frame">
+            <video
+              class="about-brand-video"
+              data-brand-video
+              muted
+              playsinline
+              preload="metadata"
+              disablepictureinpicture
+              controlslist="nodownload noplaybackrate noremoteplayback"
+              tabindex="-1"
+              aria-label="Animação da logo da Prime Terceirizados">
+              <source src="assets/video/prime-logo-square.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -216,40 +240,9 @@
     </div>
   </section>
 
-  <section class="home-about" id="prime" aria-labelledby="about-title">
-    <div class="container-xl">
-      <div class="about-panel">
-        <div class="about-logo-watermark" aria-hidden="true"><img src="assets/img/logo-prime.svg" alt=""></div>
-        <div class="about-copy reveal reveal-left assemble-heading">
-          <span class="hero-kicker">A Prime</span>
-          <h2 id="about-title">Uma empresa que reúne diferentes frentes de apoio para quem precisa terceirizar com mais organização.</h2>
-          <p>A Prime Terceirizados atende operações que demandam suporte contínuo para limpeza, segurança, jardinagem e manutenção. O foco está em estruturar o serviço conforme a realidade do cliente, sem complicar o entendimento do que será executado.</p>
-          <p>Com a nova organização da Home, cada solução aparece em um bloco próprio, com linguagem mais objetiva e visual mais claro. Isso facilita a navegação e torna a apresentação da empresa mais direta para quem visita o site pela primeira vez.</p>
-        </div>
-        <div class="about-values reveal reveal-right assemble-values">
-          <div><span class="about-value-icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><h3>Clareza operacional</h3><p>Entendimento prévio das atividades, frequência e responsabilidades que fazem parte do serviço.</p></div>
-          <div><span class="about-value-icon"><i class="bi bi-chat-square-text" aria-hidden="true"></i></span><h3>Comunicação objetiva</h3><p>Informações claras para implantação, acompanhamento e alinhamentos previstos na rotina.</p></div>
-          <div><span class="about-value-icon"><i class="bi bi-diagram-3" aria-hidden="true"></i></span><h3>Soluções integradas</h3><p>Possibilidade de combinar diferentes frentes de apoio de acordo com a necessidade da operação.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="home-process" aria-labelledby="process-title">
-    <div class="container-xl">
-      <div class="home-heading center reveal reveal-up assemble-heading">
-        <span class="hero-kicker">Como funciona</span>
-        <h2 id="process-title">Um processo simples, do primeiro contato até a rotina operacional.</h2>
-        <p>O atendimento comercial parte do entendimento da necessidade e segue para definição do escopo, implantação do serviço e acompanhamento da operação.</p>
-      </div>
-      <div class="process-grid">
-        <article class="process-card reveal reveal-up delay-1"><i class="bi bi-search" aria-hidden="true"></i><h3>Entendimento da necessidade</h3><p>Levantamento inicial do ambiente, dos horários, do fluxo e dos pontos prioritários para o atendimento.</p></article>
-        <article class="process-card reveal reveal-up delay-2"><i class="bi bi-list-check" aria-hidden="true"></i><h3>Definição do escopo</h3><p>Organização das atividades, rotinas, frequências e responsabilidades compatíveis com o serviço solicitado.</p></article>
-        <article class="process-card reveal reveal-up delay-3"><i class="bi bi-play-circle" aria-hidden="true"></i><h3>Implantação da operação</h3><p>Preparação do atendimento para início do serviço dentro das condições acordadas entre as partes.</p></article>
-        <article class="process-card reveal reveal-up delay-4"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><h3>Acompanhamento contínuo</h3><p>Comunicação para alinhamentos, continuidade da execução e ajustes previstos durante a operação.</p></article>
-      </div>
-    </div>
-  </section>
+  
 
   <section class="home-cta">
     <div class="container-xl">
@@ -300,6 +293,6 @@
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/accessibility.js" defer></script>
 <script src="assets/js/animations.js" defer></script>
-<script src="assets/js/home.js" defer></script>
+<script src="assets/js/home.js?v=20260918-2" defer></script>
 </body>
 </html>

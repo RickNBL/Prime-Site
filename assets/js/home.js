@@ -74,5 +74,49 @@
     activate(0);
   }
 
+
+  /* Vídeo da marca: toca ao entrar na área, termina parado no último frame
+     e reinicia somente quando sair da área e voltar. */
+  const brandVideo = document.querySelector('[data-brand-video]');
+  if (brandVideo) {
+    brandVideo.muted = true;
+    brandVideo.controls = false;
+    brandVideo.removeAttribute('autoplay');
+
+    let brandVideoInside = false;
+
+    const playBrandVideoFromStart = () => {
+      try {
+        brandVideo.currentTime = 0;
+      } catch (_) {}
+      const playPromise = brandVideo.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {});
+      }
+    };
+
+    if ('IntersectionObserver' in window) {
+      const brandVideoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.42) {
+            if (!brandVideoInside) {
+              brandVideoInside = true;
+              playBrandVideoFromStart();
+            }
+          } else if (brandVideoInside) {
+            brandVideoInside = false;
+            brandVideo.pause();
+          }
+        });
+      }, {
+        threshold: [0, 0.2, 0.42, 0.65, 1]
+      });
+
+      brandVideoObserver.observe(brandVideo);
+    } else {
+      playBrandVideoFromStart();
+    }
+  }
+
   document.addEventListener('prime:a11y-motion-change', requestUpdate);
 })();

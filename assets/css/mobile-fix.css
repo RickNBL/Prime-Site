@@ -753,3 +753,17 @@
     transform: none !important;
   }
 }
+
+
+/* Home — trajetória e reorganização */
+@media (max-width: 767.98px) {
+  .home-experience { width: 100%; max-width: 100%; overflow: hidden; }
+  .experience-panel, .experience-mark, .experience-copy { width: 100%; max-width: 100%; min-width: 0; }
+  .experience-mark { display: flex; align-items: center; }
+  .experience-number { flex: 0 0 auto; }
+  .experience-unit { min-width: 0; }
+  .experience-copy h2, .experience-copy p { max-width: 100%; overflow-wrap: normal; word-break: normal; }
+  .home-experience + .home-about { padding-top: 28px !important; }
+}
+
+
